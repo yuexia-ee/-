@@ -35,7 +35,7 @@ git push -u origin main
 - 头像：`assets/avatar.jpg`（800×800，换成同名文件即可）。
 - 活动证明：`assets/cert-melbourne-music-2026.jpg`、`assets/cert-supra-welcome-2026.jpg`。两个活动详情页均展示对应证书原图。
 - 活动详情页：`activities/melbourne-music-2026.html`、`activities/supra-welcome-2026.html`，与教育详情页共用 `detail.css`。新增活动时，复制一个详情页、替换文字与图片，再在 `index.html` 的活动列表里加上链接即可。
-- 关于我卡片右上角的三花猫：内联 SVG（搜索 `about-cat`），花色和位置在 `index.html` 与 `styles.css` 中调整，不依赖图片文件。
+- 关于我卡片右上角的三花猫：`assets/cat-sleeping.png`，位置和大小在 `styles.css` 的 `.about-cat` 中调整。
 - 教育详情页：`education/usyd-courses.html`（悉尼大学硕士课程，编辑 `course-list`）与 `education/yangzhou-courses.html`（扬州大学广陵学院本科课程，编辑 `course-grid`）。首页点击对应学校标题进入。
 - 荣誉奖励：`index.html` 搜索 `honor-grid`，按学年增删列表项即可。
 - 文案、链接：`index.html`（搜索姓名、邮箱即可定位）。
