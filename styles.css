@@ -271,24 +271,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
   width: 100%; height: 100%; object-fit: cover; object-position: center 42%;
   display: block;
 }
-.avatar-meta {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  font-family: var(--mono); font-size: 10.5px; letter-spacing: .18em;
-  background: var(--cream); border-top: 3px solid var(--ink);
-  padding: 5px 10px; z-index: 2;
-}
-.avatar-meta i { width: 22px; height: 2px; background: var(--ink); }
-.avatar-badge {
-  position: absolute; bottom: -16px; right: -14px;
-  background: var(--pink); border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
-  padding: 5px 13px; font-weight: 700; font-size: 13px;
-  transform: rotate(-5deg);
-}
-.avatar-caption {
-  font-family: var(--hand); font-size: 21px; margin-top: 26px;
-  color: #3a3a3a; transform: rotate(-2deg);
-}
 
 .deco-sticker { position: absolute; z-index: 3; filter: drop-shadow(3px 3px 0 rgba(0,0,0,.9)); }
 .deco-sticker svg { width: 100%; height: 100%; }
@@ -644,12 +626,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .scribble-arrow { margin-left: 14px; width: 70px; }
   .play-bubble { width: 58px; height: 58px; flex-basis: 58px; }
   .avatar-card { width: min(100%, 272px); padding: 12px; box-shadow: 9px 9px 0 var(--ink); }
-  .avatar-caption { font-size: 18px; margin-top: 22px; }
   .hero-visual { margin-top: 26px; }
   .ds-code { width: 50px; height: 50px; left: -8px; top: -16px; }
   .ds-star { width: 38px; height: 38px; right: -8px; }
   .ds-note { width: 46px; height: 46px; left: -10px; bottom: 56px; }
-  .avatar-badge { right: -6px; font-size: 12px; }
 
   .badge-row { gap: 8px; margin-top: 42px; }
   .tech-badge { padding: 5px 11px; font-size: 12.5px; }
