@@ -407,7 +407,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
   box-shadow: 10px 10px 0 var(--ink);
   padding: 38px 40px; position: relative;
 }
-.about-card { transform: rotate(-.4deg); }
+.about-card { transform: rotate(-.4deg); padding: 72px 40px 42px; }
+.about-cat {
+  position: absolute; right: -10px; bottom: calc(100% - 88px); width: 330px; height: auto;
+  z-index: 4; pointer-events: none; overflow: visible;
+  filter: drop-shadow(0 8px 10px rgba(60,45,30,.10));
+}
 .about-card .text + .text { margin-top: 16px; }
 .text { font-size: 17.5px; }
 .hl { padding: 1px 5px; border-radius: 2px; font-weight: 700; }
@@ -415,12 +420,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .hl-cyan { background: var(--cyan); }
 .hl-pink { background: var(--pink); }
 .hl-green { background: var(--green); }
-.note-sticker {
-  position: absolute; top: -20px; right: 34px;
-  background: var(--green); border: 3px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);
-  font-family: var(--hand); font-size: 24px; padding: 2px 16px;
-  transform: rotate(5deg);
-}
 
 /* ---------------- 活动参与 ---------------- */
 .activity-board {
@@ -779,7 +778,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .section-title span { font-size: 10px; padding: 2px 7px; }
   .card { padding: 24px 20px; box-shadow: 6px 6px 0 var(--ink); }
   .text { font-size: 15.5px; }
-  .note-sticker { font-size: 20px; top: -17px; right: 18px; }
+  .card.about-card { padding: 54px 20px 24px; }
+  .about-cat { width: 200px; right: -4px; bottom: calc(100% - 52px); }
 
   .activity-row { grid-template-columns: auto 1fr; gap: 12px; padding: 20px 16px; }
   .activity-mark { width: 32px; height: 32px; flex-basis: 32px; font-size: 13px; }
@@ -862,6 +862,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .content { padding: 0 14px; }
   .section-title { font-size: 24px; }
   .hero-name { font-size: 36px; }
+  .card.about-card { padding: 48px 18px 22px; }
+  .about-cat { width: 188px; right: -4px; bottom: calc(100% - 48px); }
 }
 
 /* 减少动效 */
