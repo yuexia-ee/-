@@ -5,6 +5,9 @@
 
   /* ---------- 载入动画 ---------- */
   var loader = document.getElementById('loader');
+  var loaderReady = false;
+  var loaderEntered = false;
+
   function finishLoader() {
     if (!loader) return;
     loader.classList.add('is-done');
@@ -13,11 +16,36 @@
       if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
     }, 700);
   }
-  window.addEventListener('load', function () {
-    setTimeout(finishLoader, reduceMotion ? 0 : 900);
+
+  function markLoaderReady() {
+    if (!loader || loaderReady) return;
+    loaderReady = true;
+    loader.classList.add('is-ready');
+    var tip = loader.querySelector('.loader-tip');
+    if (tip) tip.textContent = 'READY · 点击任意处进入 →';
+  }
+
+  function enterSite() {
+    if (!loaderReady || loaderEntered) return;
+    loaderEntered = true;
+    finishLoader();
+  }
+
+  if (loader) {
+    loader.addEventListener('click', enterSite);
+    window.addEventListener('load', function () {
+      setTimeout(markLoaderReady, reduceMotion ? 0 : 900);
+    });
+    // 兜底：资源加载慢时也允许进入，但不自动跳过封面
+    setTimeout(markLoaderReady, 3200);
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if ((e.key === 'Enter' || e.key === ' ') && loaderReady && !loaderEntered) {
+      e.preventDefault();
+      enterSite();
+    }
   });
-  // 兜底：即使资源加载慢，也不要一直卡住
-  setTimeout(finishLoader, 3200);
 
   /* ---------- 滚动进度 ---------- */
   var fill = document.getElementById('progressFill');
