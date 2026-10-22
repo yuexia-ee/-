@@ -362,6 +362,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .activity-row:nth-child(4) .activity-mark { background: var(--green); }
 .activity-body { padding-top: 3px; }
 .activity-name { font-size: clamp(17px, 2.2vw, 21px); font-weight: 900; line-height: 1.45; letter-spacing: -.005em; }
+.activity-role, .activity-unit { white-space: nowrap; }
 .activity-meta { margin-top: 7px; font-size: 13.5px; color: #4a4a4a; }
 .activity-link {
   display: inline-flex; align-items: center; gap: 5px; margin-top: 9px;
@@ -468,6 +469,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 /* ---------------- 教育背景 ---------------- */
 .edu-list { display: flex; flex-direction: column; gap: 22px; }
 .edu-entry {
+  --edu-accent: var(--yellow);
+  --edu-ink: var(--ink);
   display: grid; grid-template-columns: auto 1fr auto;
   align-items: center; gap: 24px;
   background: var(--paper); border: 4px solid var(--ink);
@@ -475,14 +478,15 @@ button { font: inherit; color: inherit; cursor: pointer; }
   padding: 26px 30px;
   transition: transform .22s var(--ease), box-shadow .22s var(--ease);
 }
+.edu-entry-usyd { --edu-accent: #e64626; }
+.edu-entry-glxy { --edu-accent: #ae0a29; --edu-ink: #fff; }
 .edu-entry:hover { transform: translate(-3px,-4px); box-shadow: 13px 14px 0 var(--ink); }
 .edu-index {
   width: 46px; height: 46px; flex: 0 0 46px;
   display: grid; place-items: center;
   font-family: var(--mono); font-size: 13px; font-weight: 700;
-  background: var(--yellow); border: 3px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);
+  background: var(--edu-accent); color: var(--edu-ink); border: 3px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);
 }
-.edu-entry:nth-child(2) .edu-index { background: var(--cyan); }
 .edu-school-name { font-size: clamp(21px, 2.6vw, 27px); font-weight: 900; line-height: 1.25; letter-spacing: -.01em; }
 .edu-school-link { color: inherit; text-decoration: none; }
 .edu-school-link:hover { background: linear-gradient(transparent 62%, var(--yellow) 62%); }
@@ -501,10 +505,9 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .edu-chip {
   font-size: 12.5px; font-weight: 700;
+  background: var(--edu-accent); color: var(--edu-ink);
   border: 2.5px solid var(--ink); padding: 2px 9px; box-shadow: 2px 2px 0 var(--ink);
 }
-.edu-chip-yellow { background: var(--yellow); }
-.edu-chip-cyan { background: var(--cyan); }
 
 /* ---------------- 工作经历 ---------------- */
 .work-list { display: flex; flex-direction: column; gap: 22px; }
