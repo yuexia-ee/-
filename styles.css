@@ -535,6 +535,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   transition: transform .22s var(--ease), box-shadow .22s var(--ease);
 }
 .project-entry:hover { transform: translate(-3px,-4px); box-shadow: 13px 14px 0 var(--ink); }
+.project-entry:nth-child(1) { --accent: var(--cyan); }
+.project-entry:nth-child(2) { --accent: var(--green); }
 .project-entry::before {
   content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 9px;
   background: var(--accent); border-right: 3px solid var(--ink);
@@ -554,6 +556,27 @@ button { font: inherit; color: inherit; cursor: pointer; }
   content: ""; position: absolute; left: 2px; top: 8px;
   width: 8px; height: 8px; background: var(--accent); border: 2px solid var(--ink);
 }
+.project-groups { margin-top: 18px; }
+.project-group {
+  display: grid; grid-template-columns: 96px 1fr; gap: 20px;
+  padding: 16px 0; border-top: 2px dashed rgba(0,0,0,.18);
+}
+.project-group:first-child { padding-top: 0; border-top: 0; }
+.project-group:last-child { padding-bottom: 0; }
+.project-term {
+  align-self: start; justify-self: start; white-space: nowrap;
+  font-family: var(--mono); font-size: 11px; font-weight: 700;
+  background: var(--cream); border: 2.5px solid var(--ink); box-shadow: 2px 2px 0 var(--ink);
+  padding: 3px 7px;
+}
+.project-items { list-style: none; display: grid; gap: 14px; }
+.project-item { position: relative; padding-left: 18px; }
+.project-item::before {
+  content: ""; position: absolute; left: 0; top: .55em;
+  width: 8px; height: 8px; background: var(--accent); border: 2px solid var(--ink);
+}
+.project-item h4 { font-size: 16px; font-weight: 700; line-height: 1.5; letter-spacing: -.005em; }
+.project-sub { margin-top: 3px; font-size: 13.5px; line-height: 1.6; color: #555; }
 
 /* ---------------- 联系 ---------------- */
 .section-contact { padding-top: 72px; }
@@ -711,6 +734,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .project-desc { margin-top: 11px; font-size: 14px; }
   .project-points { grid-template-columns: 1fr; gap: 8px; margin-top: 13px; }
   .project-points li { font-size: 14.5px; }
+  .project-groups { margin-top: 14px; }
+  .project-group { grid-template-columns: 1fr; gap: 9px; padding: 13px 0; }
+  .project-term { font-size: 10px; padding: 2px 6px; }
+  .project-items { gap: 11px; }
+  .project-item { padding-left: 16px; }
+  .project-item h4 { font-size: 14.5px; line-height: 1.55; }
+  .project-sub { font-size: 12.5px; }
   .work-points li::before { top: 8px; width: 7px; height: 7px; }
 
   .contact-card { padding: 21px 20px; box-shadow: 6px 6px 0 var(--ink); }
