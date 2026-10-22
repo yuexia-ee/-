@@ -241,58 +241,16 @@ button { font: inherit; color: inherit; cursor: pointer; }
   gap: 56px; align-items: center;
 }
 
-.hero-cat {
-  position: relative; display: block;
-  width: min(310px, 100%);
-  margin: -6px 0 8px -32px; padding: 0;
-  background: none; border: 0; cursor: pointer;
-  appearance: none; -webkit-appearance: none;
-  transform: rotate(-1.5deg);
+.hero-greeting {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-weight: 700; font-size: 17px;
+  background: var(--paper); border: var(--border); box-shadow: var(--shadow-sm);
+  padding: 6px 16px; margin-bottom: 22px; transform: rotate(-1.6deg);
   animation: rise .7s var(--ease) backwards .95s;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
 }
-.hero-cat svg { display: block; width: 100%; height: auto; overflow: visible; }
-.hero-cat:focus-visible { outline: 3px solid var(--ink); outline-offset: 7px; }
-.cat-head, .cat-body, .cat-tail, .cat-paws {
-  transform-box: fill-box; transform-origin: center;
-  transition: transform .32s var(--ease);
-}
-.cat-head { transform-origin: 50% 82%; }
-.cat-body { transform-origin: 50% 100%; }
-.cat-tail { transform-origin: 18% 50%; }
-.cat-eyes-open, .cat-eyes-closed, .cat-mouth-sleep, .cat-mouth-yawn,
-.cat-yawn-lines, .cat-sleep, .cat-yawn-word {
-  transition: opacity .18s, transform .26s var(--ease);
-}
-.cat-eyes-closed, .cat-mouth-yawn, .cat-yawn-lines { opacity: 0; }
-.cat-mouth-yawn { transform-box: fill-box; transform-origin: center top; transform: scale(.55); }
-.hero-cat:hover .cat-head { transform: translateY(-2px) rotate(-1deg); }
-.hero-cat.is-yawning .cat-head { transform: translateY(-8px) rotate(-3.5deg); }
-.hero-cat.is-yawning .cat-body { transform: scaleY(1.035); }
-.hero-cat.is-yawning .cat-tail { transform: rotate(5deg); }
-.hero-cat.is-yawning .cat-eyes-open,
-.hero-cat.is-yawning .cat-mouth-sleep,
-.hero-cat.is-yawning .cat-sleep { opacity: 0; }
-.hero-cat.is-yawning .cat-sleep { animation: none; }
-.hero-cat.is-yawning .cat-eyes-closed,
-.hero-cat.is-yawning .cat-mouth-yawn,
-.hero-cat.is-yawning .cat-yawn-lines { opacity: 1; }
-.hero-cat.is-yawning .cat-mouth-yawn { transform: scale(1); }
-.cat-sleep { animation: catzzz 3.2s ease-in-out infinite; }
-@keyframes catzzz {
-  0%, 100% { translate: 0 0; opacity: .55; }
-  50% { translate: 0 -4px; opacity: .9; }
-}
-.cat-yawn-word {
-  position: absolute; left: 42%; top: -8px; opacity: 0;
-  transform: rotate(5deg) scale(.6); transform-origin: bottom left;
-  font-family: var(--hand); font-size: clamp(17px, 2.2vw, 23px); line-height: 1;
-  padding: 3px 9px; background: var(--paper); border: 2.5px solid var(--ink);
-  box-shadow: 3px 3px 0 var(--ink); pointer-events: none;
-}
-.hero-cat.is-yawning .cat-yawn-word { opacity: 1; transform: rotate(5deg) scale(1); }
 @keyframes rise { from { opacity: 0; transform: translateY(22px) rotate(-1.6deg); } }
+.wave { display: inline-block; animation: wave 2.4s ease-in-out infinite; transform-origin: 70% 70%; }
+@keyframes wave { 0%,60%,100% { rotate: 0deg; } 68% { rotate: 16deg; } 76% { rotate: -8deg; } 84% { rotate: 12deg; } }
 
 .hero-name {
   font-size: clamp(40px, 6.4vw, 76px);
@@ -798,8 +756,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
   .hero { padding: 34px 18px 22px; }
   .hero-grid { gap: 38px; }
-  .hero-cat { width: min(248px, 84vw); margin: -4px 0 6px -26px; }
-  .cat-yawn-word { font-size: 18px; padding: 2px 7px; top: -5px; left: 44%; }
+  .hero-greeting { font-size: 15px; margin-bottom: 18px; padding: 5px 13px; }
   .hero-name { margin-bottom: 16px; }
   .hero-desc { font-size: 15.5px; margin-bottom: 24px; }
   .hero-social { margin-bottom: 30px; }
