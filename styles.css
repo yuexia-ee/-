@@ -62,53 +62,117 @@ button { font: inherit; color: inherit; cursor: pointer; }
   position: fixed; inset: 0; z-index: 100001;
   background: var(--yellow);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  gap: 34px;
+  gap: 28px; overflow: hidden;
   transition: opacity .55s var(--ease), visibility .55s;
+}
+.loader::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(10,10,10,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,10,10,.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 46%, #000 0%, #000 36%, transparent 78%);
+  mask-image: radial-gradient(ellipse at 50% 46%, #000 0%, #000 36%, transparent 78%);
+}
+.loader::after {
+  content: ""; position: absolute; inset: 0; z-index: 4; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(10,10,10,.05) 0 1px, transparent 1px 4px);
+  mix-blend-mode: multiply; opacity: .55;
 }
 .loader.is-done { opacity: 0; visibility: hidden; pointer-events: none; }
 
-.loader-shapes { position: absolute; inset: 0; overflow: hidden; }
+.loader-shapes { position: absolute; inset: 0; overflow: hidden; z-index: 1; }
 .loader-blob {
   position: absolute; border: 4px solid var(--ink); box-shadow: 8px 8px 0 var(--ink);
-  animation: floaty 4.2s ease-in-out infinite;
+  border-radius: 0;
+  animation: floaty 4.2s steps(8, end) infinite;
 }
-.b1 { width: 90px; height: 90px; background: var(--cyan); top: 15%; left: 11%; border-radius: 14px; transform: rotate(-8deg); }
-.b2 { width: 74px; height: 74px; background: var(--pink); top: 18%; right: 12%; border-radius: 50%; animation-delay: .6s; }
-.b3 { width: 110px; height: 60px; background: var(--green); bottom: 16%; left: 14%; border-radius: 6px; transform: rotate(7deg); animation-delay: 1.1s; }
+.b1 {
+  width: 90px; height: 90px; top: 15%; left: 11%; transform: rotate(-6deg);
+  background-color: var(--cyan);
+  background-image: conic-gradient(var(--cyan) 25%, #8ee8f5 0 50%, var(--cyan) 0 75%, #8ee8f5 0);
+  background-size: 18px 18px;
+}
+.b2 {
+  width: 74px; height: 74px; top: 18%; right: 12%; transform: rotate(5deg); animation-delay: .6s;
+  background-color: var(--pink);
+  background-image: conic-gradient(var(--pink) 25%, #ff96bd 0 50%, var(--pink) 0 75%, #ff96bd 0);
+  background-size: 15px 15px;
+}
+.b3 {
+  width: 110px; height: 60px; bottom: 16%; left: 14%; transform: rotate(-4deg); animation-delay: 1.1s;
+  background-color: var(--green);
+  background-image: conic-gradient(var(--green) 25%, #8ed9b8 0 50%, var(--green) 0 75%, #8ed9b8 0);
+  background-size: 16px 16px;
+}
 
 .loader-letters {
   display: flex; justify-content: center; position: relative; z-index: 2;
   max-width: calc(100vw - 24px);
 }
 .loader-word {
-  position: relative; display: inline-block; white-space: nowrap;
-  padding: 14px 20px 18px;
+  position: relative; display: inline-block;
   background: var(--paper);
-  border: 5px solid var(--ink); box-shadow: 10px 10px 0 var(--ink);
-  font-size: clamp(30px, 5.6vw, 52px); font-weight: 900; line-height: 1.2;
-  letter-spacing: .01em; text-align: center;
-  animation: pop .7s cubic-bezier(.34,1.56,.64,1) both;
+  border: 4px solid var(--ink); box-shadow: 10px 10px 0 var(--ink);
+  text-align: left;
+  animation: pixel-up .45s steps(4, end) both;
+}
+.loader-status {
+  display: flex; align-items: center; justify-content: space-between; gap: 22px;
+  padding: 8px 12px 7px;
+  background: var(--cream); border-bottom: 3px solid var(--ink);
+  font-family: var(--mono); font-size: 9px; font-weight: 700; letter-spacing: .12em; line-height: 1;
+}
+.loader-signal { display: inline-flex; align-items: center; gap: 6px; }
+.loader-signal i {
+  width: 7px; height: 7px; display: inline-block;
+  background: var(--green); border: 2px solid var(--ink);
+  animation: blink 1s steps(1) infinite;
+}
+.loader-line {
+  padding: 14px 18px 18px;
+  font-size: clamp(30px, 5.6vw, 52px); font-weight: 900; line-height: 1.15;
+  letter-spacing: .01em; white-space: nowrap;
+  animation: scan-in .46s steps(7, end) both .06s;
 }
 .loader-world { position: relative; display: inline-block; padding: 0 3px; z-index: 0; }
 .loader-world::after {
-  content: ""; position: absolute; left: -2px; right: -2px; bottom: .08em;
-  height: .34em; background: var(--pink); z-index: -1; transform: rotate(-1.5deg);
+  content: ""; position: absolute; left: -3px; right: -3px; bottom: .1em;
+  height: .3em; background: var(--pink); z-index: -1;
+  box-shadow: 3px 3px 0 rgba(10,10,10,.22);
+}
+.loader-cursor {
+  display: inline-block; width: .38em; height: .78em; margin-left: .12em;
+  background: var(--ink); vertical-align: -.04em;
+  animation: blink .8s steps(1) infinite;
 }
 
 .loader-bar {
-  width: 300px; max-width: 74vw; height: 20px; background: var(--paper);
+  width: 300px; max-width: 74vw; height: 18px; padding: 3px;
+  background: var(--paper);
   border: 4px solid var(--ink); box-shadow: 6px 6px 0 var(--ink);
   position: relative; z-index: 2;
 }
 .loader-fill {
-  display: block; height: 100%; width: 0; background: var(--ink);
-  animation: fill 1.05s var(--ease) forwards .15s;
+  display: block; height: 100%; width: 0;
+  background: repeating-linear-gradient(90deg, var(--ink) 0 9px, transparent 9px 13px);
+  animation: fill .72s steps(9, end) forwards .12s;
 }
-.loader-tip { font-family: var(--mono); font-size: 12px; letter-spacing: .18em; position: relative; z-index: 2; }
+.loader-tip {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .14em;
+  position: relative; z-index: 2;
+}
+.loader-tip::before {
+  content: ""; width: 8px; height: 8px; background: var(--ink);
+  animation: blink 1.1s steps(1) infinite;
+}
 
-@keyframes pop { from { opacity: 0; transform: scale(.3) rotate(-16deg); } to { opacity: 1; transform: scale(1) rotate(0); } }
+@keyframes pixel-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes scan-in { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
 @keyframes fill { to { width: 100%; } }
-@keyframes floaty { 0%,100% { translate: 0 0; } 50% { translate: 0 -18px; } }
+@keyframes floaty { 0%,100% { translate: 0 0; } 50% { translate: 0 -14px; } }
+@keyframes blink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
 
 /* ---------------- 顶部进度条 ---------------- */
 .scroll-progress {
@@ -233,7 +297,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
   animation: rise2 .9s var(--ease) backwards 1.15s; }
 .avatar-card {
   position: relative; width: min(100%, 380px);
-  background: var(--cyan);
+  background-color: var(--cyan);
+  background-image:
+    linear-gradient(rgba(10,10,10,.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,10,10,.14) 1px, transparent 1px);
+  background-size: 8px 8px;
   border: 4px solid var(--ink); box-shadow: 14px 14px 0 var(--ink);
   padding: 16px; transform: rotate(2deg);
   transition: box-shadow .35s var(--ease);
@@ -254,6 +322,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
   position: relative; overflow: hidden;
   border: 3px solid var(--ink); background: var(--cream);
   aspect-ratio: 1 / 1; display: block;
+}
+.avatar-inner::after {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(10,10,10,.035) 0 1px, transparent 1px 4px);
+  mix-blend-mode: multiply;
 }
 .avatar-photo {
   width: 100%; height: 100%; object-fit: cover; object-position: center 42%;
@@ -773,9 +846,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .big-mail { font-size: clamp(19px, 6.2vw, 30px); }
 
   .footer { margin-top: 42px; padding: 26px 0 28px; flex-direction: column; align-items: flex-start; gap: 10px; }
-  .loader-word { padding: 12px 16px 16px; border-width: 4px; box-shadow: 8px 8px 0 var(--ink); }
-  .loader-letters { max-width: calc(100vw - 32px); }
-  .loader-tip { font-size: 10px; }
+  .loader-word { box-shadow: 8px 8px 0 var(--ink); }
+  .loader-status { padding: 7px 9px 6px; gap: 14px; font-size: 8px; }
+  .loader-line { padding: 12px 12px 15px; }
+  .loader-letters { max-width: calc(100vw - 28px); }
+  .loader-tip { font-size: 10px; letter-spacing: .1em; }
   .b1, .b2, .b3 { width: 54px; height: 54px; }
   .b3 { height: 40px; width: 74px; }
 }
