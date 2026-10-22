@@ -6,6 +6,7 @@
 .ap-frame { max-width: 1060px; }
 .ap-theme-melbourne { --ap-accent: #8ad9bb; }
 .ap-theme-supra { --ap-accent: #66d9ef; }
+.ap-theme-courses { --ap-accent: var(--yellow); }
 
 /* 导航里的返回主页按钮 */
 .ap-home {
@@ -104,6 +105,31 @@
 }
 .ap-list strong { font-weight: 900; }
 
+/* 主修课程 */
+.course-grid {
+  list-style: none; counter-reset: course; padding: 0;
+  margin: 20px 0 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 13px 14px;
+}
+.course-item {
+  position: relative; min-height: 58px; display: flex; align-items: center;
+  padding: 11px 16px 11px 46px;
+  background: var(--paper); border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
+  font-size: 15px; font-weight: 700; line-height: 1.45;
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s;
+}
+.course-item::before {
+  counter-increment: course; content: counter(course, decimal-leading-zero);
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  width: 24px; height: 24px; display: grid; place-items: center;
+  font-family: var(--mono); font-size: 9.5px; font-weight: 700;
+  background: var(--yellow); border: 2px solid var(--ink); box-shadow: 2px 2px 0 var(--ink);
+}
+.course-item:nth-child(4n+2)::before { background: var(--cyan); }
+.course-item:nth-child(4n+3)::before { background: var(--pink); }
+.course-item:nth-child(4n)::before { background: var(--green); }
+.course-item:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); background: var(--cream); }
+
 /* 证明 */
 .ap-proof {
   margin: 20px 0 0; background: var(--paper);
@@ -185,6 +211,9 @@
   .ap-section h2 { font-size: 19px; }
   .ap-list { margin-top: 14px; gap: 10px; }
   .ap-list li { font-size: 14.5px; padding-left: 23px; }
+  .course-grid { grid-template-columns: 1fr; gap: 9px; margin-top: 16px; }
+  .course-item { min-height: 52px; padding: 10px 12px 10px 42px; border-width: 2.5px; box-shadow: 3px 3px 0 var(--ink); font-size: 14px; }
+  .course-item::before { left: 10px; width: 22px; height: 22px; font-size: 8.5px; }
   .ap-proof { box-shadow: 6px 6px 0 var(--ink); border-width: 3px; }
   .ap-proof:hover { transform: none; box-shadow: 6px 6px 0 var(--ink); }
   .ap-proof figcaption { flex-direction: column; align-items: flex-start; gap: 3px; font-size: 10px; padding: 9px 11px; }
