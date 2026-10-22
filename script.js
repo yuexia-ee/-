@@ -19,6 +19,21 @@
   // 兜底：即使资源加载慢，也不要一直卡住
   setTimeout(finishLoader, 3200);
 
+  /* ---------- 猫咪打哈欠 ---------- */
+  var heroCat = document.querySelector('.hero-cat');
+  if (heroCat) {
+    var yawnTimer;
+    heroCat.addEventListener('click', function () {
+      heroCat.classList.remove('is-yawning');
+      void heroCat.offsetWidth;
+      heroCat.classList.add('is-yawning');
+      clearTimeout(yawnTimer);
+      yawnTimer = setTimeout(function () {
+        heroCat.classList.remove('is-yawning');
+      }, 1900);
+    });
+  }
+
   /* ---------- 滚动进度 ---------- */
   var fill = document.getElementById('progressFill');
   var ticking = false;
