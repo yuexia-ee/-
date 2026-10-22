@@ -161,7 +161,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .loader.is-ready { cursor: pointer; }
 .loader.is-ready .loader-tip { font-size: 12px; letter-spacing: .12em; }
-.loader.is-ready .loader-tip::before { background: var(--green); }
+.loader.is-ready .loader-tip::before { background: var(--green); animation: none; }
 .loader-tip {
   display: flex; align-items: center; gap: 9px;
   font-family: var(--mono); font-size: 11px; letter-spacing: .14em;
