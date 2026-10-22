@@ -254,7 +254,9 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .avatar-badge {
   position: absolute; bottom: -16px; right: -14px;
   width: 84px; height: 31px;
+  display: grid; place-items: center;
   background: var(--pink); border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
+  font-size: 13px; font-weight: 700; line-height: 1;
   transform: rotate(-5deg);
 }
 
@@ -612,7 +614,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .ds-code { width: 50px; height: 50px; left: -8px; top: -16px; }
   .ds-star { width: 38px; height: 38px; right: -8px; }
   .ds-note { width: 46px; height: 46px; left: -10px; bottom: 56px; }
-  .avatar-badge { right: -6px; width: 78px; height: 29px; }
+  .avatar-badge { right: -6px; width: 78px; height: 29px; font-size: 12px; }
 
   .badge-row { gap: 8px; margin-top: 42px; }
   .tech-badge { padding: 5px 11px; font-size: 12.5px; }
