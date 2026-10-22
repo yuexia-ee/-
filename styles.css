@@ -407,11 +407,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
   box-shadow: 10px 10px 0 var(--ink);
   padding: 38px 40px; position: relative;
 }
-.about-card { transform: rotate(-.4deg); padding: 72px 40px 42px; }
+.about-stage { position: relative; }
+.about-card { transform: rotate(-.4deg); padding: 42px 40px 42px; position: relative; z-index: 2; }
 .about-cat {
-  position: absolute; right: -16px; bottom: calc(100% - 52px); width: 340px; height: auto;
-  z-index: 4; pointer-events: none;
-  filter: drop-shadow(0 8px 10px rgba(60,45,30,.14));
+  position: absolute; right: -8px; bottom: calc(100% - 26px); width: 170px; height: auto;
+  z-index: 4; pointer-events: none; transform: rotate(-.4deg); transform-origin: bottom right;
+  filter: drop-shadow(0 10px 10px rgba(60,45,30,.18));
 }
 .about-card .text + .text { margin-top: 16px; }
 .text { font-size: 17.5px; }
@@ -778,8 +779,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .section-title span { font-size: 10px; padding: 2px 7px; }
   .card { padding: 24px 20px; box-shadow: 6px 6px 0 var(--ink); }
   .text { font-size: 15.5px; }
-  .card.about-card { padding: 54px 20px 24px; }
-  .about-cat { width: 170px; right: -6px; bottom: calc(100% - 26px); }
+  .card.about-card { padding: 34px 20px 24px; }
+  .about-cat { width: 85px; right: -4px; bottom: calc(100% - 13px); }
 
   .activity-row { grid-template-columns: auto 1fr; gap: 12px; padding: 20px 16px; }
   .activity-mark { width: 32px; height: 32px; flex-basis: 32px; font-size: 13px; }
@@ -862,8 +863,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .content { padding: 0 14px; }
   .section-title { font-size: 24px; }
   .hero-name { font-size: 36px; }
-  .card.about-card { padding: 48px 18px 22px; }
-  .about-cat { width: 160px; right: -4px; bottom: calc(100% - 24px); }
+  .card.about-card { padding: 32px 18px 22px; }
+  .about-cat { width: 80px; right: -3px; bottom: calc(100% - 12px); }
 }
 
 /* 减少动效 */
