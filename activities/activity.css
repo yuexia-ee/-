@@ -1,0 +1,195 @@
+/* ============================================================
+   活动详情页
+   与主页共用 styles.css 的配色、字体、外框与导航
+   ============================================================ */
+
+.ap-frame { max-width: 1060px; }
+.ap-theme-melbourne { --ap-accent: #8ad9bb; }
+.ap-theme-supra { --ap-accent: #66d9ef; }
+
+/* 导航里的返回主页按钮 */
+.ap-home {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: var(--paper); border: 2.5px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  padding: 5px 11px; font-size: 13px;
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s;
+}
+.ap-home::after { display: none; }
+.ap-home:hover { background: var(--cyan); transform: translate(1px, 1px); box-shadow: 2px 2px 0 var(--ink); }
+.ap-home:hover::after { transform: none; }
+
+.ap-main {
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 46px 48px 52px;
+}
+
+.ap-back {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 12px; font-weight: 700;
+  border-bottom: 2px solid var(--ink); padding-bottom: 2px;
+  transition: background .18s;
+}
+.ap-back:hover { background: var(--yellow); }
+.ap-back svg { width: 15px; height: 15px; }
+
+.ap-header { margin-top: 38px; }
+.ap-kicker {
+  display: inline-block; background: var(--yellow);
+  border: 3px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);
+  padding: 3px 11px; font-family: var(--mono); font-size: 10.5px;
+  font-weight: 700; letter-spacing: .14em;
+  transform: rotate(-1.6deg);
+}
+.ap-title {
+  margin-top: 22px;
+  font-size: clamp(34px, 5.6vw, 54px);
+  font-weight: 900; line-height: 1.14; letter-spacing: -.025em;
+  text-wrap: balance;
+}
+.ap-title em {
+  font-style: normal;
+  background: linear-gradient(transparent 64%, var(--ap-accent) 64%);
+}
+.ap-role {
+  margin-top: 16px; font-family: var(--mono); font-size: 13.5px; font-weight: 700;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+}
+.ap-role i { font-style: normal; opacity: .45; }
+
+.ap-lede {
+  margin-top: 24px; max-width: 64ch;
+  font-size: 16.5px; line-height: 1.9; color: #262626;
+  text-wrap: pretty;
+}
+.ap-nowrap { white-space: nowrap; }
+
+/* 信息卡 */
+.ap-meta {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+  margin-top: 30px;
+}
+.ap-meta-item {
+  background: var(--cream); border: 3px solid var(--ink);
+  border-top: 7px solid var(--ap-accent);
+  box-shadow: 4px 4px 0 var(--ink);
+  padding: 11px 14px 13px;
+}
+.ap-meta-item dt {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: .13em;
+  color: #555; font-weight: 700;
+}
+.ap-meta-item dd { margin-top: 4px; font-size: 14.5px; font-weight: 700; line-height: 1.45; }
+
+/* 小节 */
+.ap-section { margin-top: 48px; }
+.ap-section h2 {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 22px; font-weight: 900; letter-spacing: -.01em;
+}
+.ap-num {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em;
+  background: var(--ink); color: var(--yellow); padding: 3px 7px;
+}
+.ap-list { list-style: none; margin-top: 18px; display: grid; gap: 12px; }
+.ap-list li {
+  position: relative; padding-left: 27px;
+  font-size: 15.5px; line-height: 1.8; color: #1c1c1c;
+}
+.ap-list li::before {
+  content: ""; position: absolute; left: 0; top: .62em;
+  width: 10px; height: 10px; background: var(--ap-accent);
+  border: 2.5px solid var(--ink);
+}
+.ap-list strong { font-weight: 900; }
+
+/* 证明 */
+.ap-proof {
+  margin: 20px 0 0; background: var(--paper);
+  border: 4px solid var(--ink); box-shadow: 10px 10px 0 var(--ink);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+}
+.ap-proof:hover { transform: translate(-2px, -2px); box-shadow: 12px 12px 0 var(--ink); }
+.ap-proof a { display: block; cursor: zoom-in; }
+.ap-proof img { width: 100%; height: auto; }
+.ap-proof figcaption {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  flex-wrap: wrap; padding: 11px 15px;
+  border-top: 3px solid var(--ink); background: var(--cream);
+  font-family: var(--mono); font-size: 11px; font-weight: 700;
+}
+.ap-proof figcaption span:last-child { opacity: .62; }
+.ap-proof-note {
+  margin-top: 12px; font-size: 12.5px; line-height: 1.7; color: #5a5a5a;
+}
+.ap-proof-note a {
+  border-bottom: 2px solid currentColor; font-weight: 700;
+}
+.ap-proof-note a:hover { background: var(--yellow); }
+
+/* 翻页 */
+.ap-pager {
+  display: flex; justify-content: space-between; align-items: stretch; gap: 14px;
+  margin-top: 54px; padding-top: 26px; border-top: 3px dashed #b9b9b9;
+}
+.ap-page-btn {
+  display: flex; flex-direction: column; gap: 3px;
+  font-size: 13.5px; font-weight: 700; line-height: 1.4;
+  border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
+  background: var(--paper); padding: 9px 14px;
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease);
+}
+.ap-page-btn:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }
+.ap-page-btn span {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: .12em;
+  font-weight: 700; opacity: .55;
+}
+.ap-page-btn.is-next { text-align: right; background: var(--ink); color: var(--yellow); }
+.ap-page-btn.is-next span { opacity: .7; }
+
+/* 页脚 */
+.ap-footer {
+  display: flex; justify-content: space-between; align-items: center; gap: 14px;
+  border-top: 4px solid var(--ink); background: var(--cream);
+  padding: 17px 48px; font-family: var(--mono); font-size: 11px;
+}
+.ap-footer a { font-weight: 700; border-bottom: 2px solid currentColor; }
+.ap-footer a:hover { background: var(--yellow); }
+
+/* 入场 */
+@media (prefers-reduced-motion: no-preference) {
+  .ap-header, .ap-lede, .ap-meta {
+    animation: ap-in .55s var(--ease) both;
+  }
+  .ap-lede { animation-delay: .08s; }
+  .ap-meta { animation-delay: .14s; }
+  @keyframes ap-in {
+    from { opacity: 0; translate: 0 14px; }
+    to { opacity: 1; translate: 0 0; }
+  }
+}
+
+@media (max-width: 720px) {
+  .ap-main { padding: 28px 20px 36px; }
+  .ap-home { font-size: 11.5px; padding: 4px 8px; }
+  .ap-header { margin-top: 28px; }
+  .ap-title { font-size: clamp(30px, 9vw, 40px); margin-top: 18px; }
+  .ap-role { font-size: 11.5px; gap: 6px; }
+  .ap-lede { margin-top: 18px; font-size: 15.5px; line-height: 1.85; }
+  .ap-meta { grid-template-columns: 1fr; gap: 10px; margin-top: 22px; }
+  .ap-meta-item { display: flex; align-items: baseline; gap: 12px; padding: 9px 12px 10px; border-top-width: 5px; }
+  .ap-meta-item dt { flex: 0 0 82px; }
+  .ap-meta-item dd { margin-top: 0; font-size: 14px; }
+  .ap-section { margin-top: 36px; }
+  .ap-section h2 { font-size: 19px; }
+  .ap-list { margin-top: 14px; gap: 10px; }
+  .ap-list li { font-size: 14.5px; padding-left: 23px; }
+  .ap-proof { box-shadow: 6px 6px 0 var(--ink); border-width: 3px; }
+  .ap-proof:hover { transform: none; box-shadow: 6px 6px 0 var(--ink); }
+  .ap-proof figcaption { flex-direction: column; align-items: flex-start; gap: 3px; font-size: 10px; padding: 9px 11px; }
+  .ap-pager { flex-direction: column; margin-top: 40px; padding-top: 22px; }
+  .ap-page-btn { width: 100%; }
+  .ap-page-btn.is-next { text-align: left; }
+  .ap-footer { padding: 15px 20px; font-size: 10px; }
+}

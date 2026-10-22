@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>夏越 | USYD 电气工程硕士</title>
+<meta name="description" content="夏越，悉尼大学电气工程（智能信息工程）硕士。喜欢音乐、看剧，悉尼大学研究生学会电台栏目《同学你好》音频编辑。" />
+<meta name="theme-color" content="#ffd93d" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="夏越 | USYD 电气工程硕士" />
+<meta property="og:description" content="悉尼大学电气工程（智能信息工程）硕士。音乐、看剧，以及《同学你好》的音频编辑。" />
+<meta property="og:image" content="assets/avatar.jpg" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Caveat:wght@500;700&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- 载入动画 -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-shapes">
+    <span class="loader-blob b1"></span>
+    <span class="loader-blob b2"></span>
+    <span class="loader-blob b3"></span>
+  </div>
+  <div class="loader-letters">
+    <span class="loader-letter l1">夏</span>
+    <span class="loader-letter l2">越</span>
+  </div>
+  <div class="loader-bar"><span class="loader-fill"></span></div>
+  <p class="loader-tip">LOADING · 正在打开名片</p>
+</div>
+
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<!-- 页面进度 -->
+<div class="scroll-progress" aria-hidden="true"><span id="progressFill"></span></div>
+
+<div class="frame">
+
+  <!-- 导航 -->
+  <nav class="navbar" aria-label="主导航">
+    <div class="nav-inner">
+      <a href="#top" class="brand" aria-label="夏越，回到首页">
+        <span class="brand-mark">夏越</span>
+        <span class="brand-sub">XIA&nbsp;YUE</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">关于</a>
+        <a href="#education" class="nav-link">教育</a>
+        <a href="#work" class="nav-link">工作</a>
+        <a href="#interests" class="nav-link">兴趣</a>
+        <a href="#contact" class="nav-cta">找我聊聊 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <span id="top"></span>
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <p class="hero-greeting"><span class="wave">👋</span> 嗨，你好！</p>
+          <h1 class="hero-name" id="hero-title">我是<em class="ink">夏越</em>。</h1>
+          <p class="hero-desc">
+            USYD 电气工程硕士，方向是智能信息工程。喜欢音乐，也喜欢看剧；
+            平时在悉尼大学研究生学会的电台栏目里做音频编辑，把声音一点点调到刚刚好。
+          </p>
+
+          <div class="hero-social" aria-label="联系方式">
+            <a class="icon-btn" href="https://github.com/yuexia-ee" target="_blank" rel="noopener" aria-label="GitHub：yuexia-ee" data-tip="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.9 5.33.9 11.6c0 4.9 3.17 9.05 7.57 10.52.55.1.75-.24.75-.53 0-.26-.01-1.13-.02-2.05-3.08.67-3.73-1.3-3.73-1.3-.5-1.28-1.23-1.62-1.23-1.62-1-.69.08-.68.08-.68 1.11.08 1.7 1.14 1.7 1.14.98 1.69 2.57 1.2 3.2.92.1-.72.38-1.2.7-1.48-2.46-.28-5.05-1.23-5.05-5.48 0-1.21.43-2.2 1.14-2.98-.11-.28-.49-1.4.11-2.92 0 0 .93-.3 3.05 1.14a10.5 10.5 0 0 1 5.56 0c2.11-1.44 3.04-1.14 3.04-1.14.6 1.52.22 2.64.11 2.92.71.78 1.14 1.77 1.14 2.98 0 4.26-2.6 5.19-5.07 5.47.4.34.75 1.02.75 2.06 0 1.49-.01 2.69-.01 3.06 0 .29.2.64.76.53a11.1 11.1 0 0 0 7.56-10.52C23.1 5.33 18.27.5 12 .5Z"/></svg>
+            </a>
+            <a class="icon-btn" href="mailto:thatxiayue@gmail.com" aria-label="发邮件给夏越" data-tip="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13Zm2.2.3 7.1 5.32a1.2 1.2 0 0 0 1.4 0l7.1-5.32H4.2Zm15.6 2.05-6.5 4.87a3.2 3.2 0 0 1-3.8 0l-6.5-4.87v10.65c0 .28.22.5.5.5h15.8a.5.5 0 0 0 .5-.5V7.85Z"/></svg>
+            </a>
+            <a class="icon-btn" href="https://www.xiaoyuzhoufm.com/podcast/6a3930c3c03b0a803bcc066a" target="_blank" rel="noopener" aria-label="小宇宙：同学你好" data-tip="电台">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13.5a8 8 0 0 1 16 0v4.2a2.8 2.8 0 0 1-2.8 2.8h-1.7v-6h2.2v-1a5.7 5.7 0 1 0-11.4 0v1h2.2v6H6.8A2.8 2.8 0 0 1 4 17.7v-4.2Zm2.2 1.7v2.5c0 .33.27.6.6.6h.5v-3.1h-1.1Zm11.6 3.1h.5a.6.6 0 0 0 .6-.6v-2.5h-1.1v3.1Z"/></svg>
+            </a>
+          </div>
+
+          <div class="hero-cta-row">
+            <div class="scribble">
+              <span class="scribble-text">去听听我们的电台</span>
+              <svg class="scribble-arrow" viewBox="0 0 120 70" aria-hidden="true">
+                <path d="M6 12c26 2 52 14 66 34" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M60 44c7 1 12 3 16 8" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+                <path d="M72 52l5-10M72 52l10 2" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <a class="play-bubble" href="https://www.xiaoyuzhoufm.com/podcast/6a3930c3c03b0a803bcc066a" target="_blank" rel="noopener" aria-label="打开小宇宙电台《同学你好》">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5L8 5.5Z"/></svg>
+              <span class="pulse-ring"></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <span class="deco-sticker ds-code" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><rect x="3" y="3" width="90" height="90" rx="10" fill="#66d9ef" stroke="#000" stroke-width="4"/><path d="M38 38 22 50l16 12M62 38l16 12-16 12M55 33 45 67" fill="none" stroke="#000" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="deco-sticker ds-star" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><path d="M50 6l13 27 30 4-22 21 6 30-27-15-27 15 6-30L7 37l30-4L50 6Z" fill="#ff6b9d" stroke="#000" stroke-width="4" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="deco-sticker ds-note" aria-hidden="true">
+            <svg viewBox="0 0 100 100"><rect x="3" y="3" width="90" height="90" rx="10" fill="#a8e6cf" stroke="#000" stroke-width="4"/><path d="M58 22v42a13 13 0 1 1-8-12V30l26-6v34a13 13 0 1 1-8-12V22l-10 2Z" fill="#000"/></svg>
+          </span>
+
+          <div class="avatar-card">
+            <span class="tape" aria-hidden="true"></span>
+            <div class="avatar-inner">
+              <img class="avatar-photo" src="assets/avatar.jpg" alt="夏越的手绘自画像" width="800" height="800" />
+              <div class="avatar-meta"><span>XIA YUE</span><i></i><span>USYD</span></div>
+            </div>
+            <span class="avatar-badge">电气工程</span>
+          </div>
+          <p class="avatar-caption">把名片贴在墙上，也贴在互联网上。</p>
+        </div>
+      </div>
+
+      <!-- 技术/兴趣徽章 -->
+      <div class="badge-row" aria-label="关键词">
+        <span class="tech-badge"><span class="tb-dot d-yellow"></span>电气工程</span>
+        <span class="tech-badge"><span class="tb-dot d-cyan"></span>智能信息工程</span>
+        <span class="tech-badge"><span class="tb-dot d-pink"></span>音频编辑</span>
+        <span class="tech-badge"><span class="tb-dot d-green"></span>音乐</span>
+        <span class="tech-badge"><span class="tb-dot d-yellow"></span>看剧</span>
+      </div>
+    </section>
+
+    <!-- 跑马灯 -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-set">音乐 <b>✦</b> 看剧 <b>✦</b> 音频编辑 <b>✦</b> 电气工程 <b>✦</b> 智能信息工程 <b>✦</b> 同学你好 <b>✦</b></span>
+        <span class="ticker-set">音乐 <b>✦</b> 看剧 <b>✦</b> 音频编辑 <b>✦</b> 电气工程 <b>✦</b> 智能信息工程 <b>✦</b> 同学你好 <b>✦</b></span>
+        <span class="ticker-set">音乐 <b>✦</b> 看剧 <b>✦</b> 音频编辑 <b>✦</b> 电气工程 <b>✦</b> 智能信息工程 <b>✦</b> 同学你好 <b>✦</b></span>
+      </div>
+    </div>
+
+    <!-- 撕纸分隔 -->
+    <div class="paper-tear" aria-hidden="true">
+      <svg viewBox="0 0 1440 30" preserveAspectRatio="none">
+        <path d="M0,0 L0,15 Q10,5 20,15 T40,15 Q50,5 60,15 T80,15 Q90,20 100,15 T120,15 Q130,10 140,15 T160,15 Q170,5 180,15 T200,15 Q210,20 220,15 T240,15 Q250,8 260,15 T280,15 Q290,18 300,15 T320,15 Q330,5 340,15 T360,15 Q370,12 380,15 T400,15 Q410,20 420,15 T440,15 Q450,6 460,15 T480,15 Q490,16 500,15 T520,15 Q530,8 540,15 T560,15 Q570,20 580,15 T600,15 Q610,10 620,15 T640,15 Q650,5 660,15 T680,15 Q690,18 700,15 T720,15 Q730,12 740,15 T760,15 Q770,7 780,15 T800,15 Q810,20 820,15 T840,15 Q850,9 860,15 T880,15 Q890,14 900,15 T920,15 Q930,6 940,15 T960,15 Q970,19 980,15 T1000,15 Q1010,11 1020,15 T1040,15 Q1050,5 1060,15 T1080,15 Q1090,17 1100,15 T1120,15 Q1130,8 1140,15 T1160,15 Q1170,13 1180,15 T1200,15 Q1210,20 1220,15 T1240,15 Q1250,7 1260,15 T1280,15 Q1290,16 1300,15 T1320,15 Q1330,10 1340,15 T1360,15 Q1370,5 1380,15 T1400,15 Q1410,18 1420,15 T1440,15 L1440,0 Z" fill="#ffffff"/>
+        <path d="M0,15 Q10,5 20,15 T40,15 Q50,5 60,15 T80,15 Q90,20 100,15 T120,15 Q130,10 140,15 T160,15 Q170,5 180,15 T200,15 Q210,20 220,15 T240,15 Q250,8 260,15 T280,15 Q290,18 300,15 T320,15 Q330,5 340,15 T360,15 Q370,12 380,15 T400,15 Q410,20 420,15 T440,15 Q450,6 460,15 T480,15 Q490,16 500,15 T520,15 Q530,8 540,15 T560,15 Q570,20 580,15 T600,15 Q610,10 620,15 T640,15 Q650,5 660,15 T680,15 Q690,18 700,15 T720,15 Q730,12 740,15 T760,15 Q770,7 780,15 T800,15 Q810,20 820,15 T840,15 Q850,9 860,15 T880,15 Q890,14 900,15 T920,15 Q930,6 940,15 T960,15 Q970,19 980,15 T1000,15 Q1010,11 1020,15 T1040,15 Q1050,5 1060,15 T1080,15 Q1090,17 1100,15 T1120,15 Q1130,8 1140,15 T1160,15 Q1170,13 1180,15 T1200,15 Q1210,20 1220,15 T1240,15 Q1250,7 1260,15 T1280,15 Q1290,16 1300,15 T1320,15 Q1330,10 1340,15 T1360,15 Q1370,5 1380,15 T1400,15 Q1410,18 1420,15 T1440,15" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="content">
+
+      <!-- 关于 -->
+      <section class="section" id="about" aria-labelledby="about-title">
+        <h2 class="section-title" id="about-title"><span>ABOUT</span>关于我</h2>
+        <div class="card about-card reveal">
+          <p class="text">
+            我是夏越，<span class="hl hl-yellow">悉尼大学电气工程（智能信息工程）硕士</span>。
+            平时喜欢<span class="hl hl-cyan">音乐</span>和<span class="hl hl-pink">看剧</span>，
+            也在悉尼大学研究生学会的电台栏目<span class="hl hl-green">《同学你好》</span>里做音频编辑。
+          </p>
+          <p class="text">
+            喜欢把一段声音剪干净、混舒服，也喜欢把复杂的事情拆成清楚的小块。
+            欢迎从下面的联系方式找到我。
+          </p>
+          <span class="note-sticker" aria-hidden="true">你好!</span>
+        </div>
+      </section>
+
+      <!-- 教育背景 -->
+      <section class="section" id="education" aria-labelledby="education-title">
+        <h2 class="section-title" id="education-title"><span>EDUCATION</span>教育背景</h2>
+        <div class="edu-list">
+          <article class="edu-entry reveal">
+            <span class="edu-index" aria-hidden="true">01</span>
+            <div class="edu-body">
+              <h3 class="edu-school-name">悉尼大学</h3>
+              <p class="edu-major">电气工程硕士（智能信息工程）</p>
+            </div>
+            <div class="edu-side">
+              <span class="edu-date">2026/02 – 2027/06</span>
+              <span class="edu-chip edu-chip-yellow">硕士</span>
+            </div>
+          </article>
+
+          <article class="edu-entry reveal">
+            <span class="edu-index" aria-hidden="true">02</span>
+            <div class="edu-body">
+              <h3 class="edu-school-name">扬州大学广陵学院</h3>
+              <p class="edu-major">电气工程及其自动化</p>
+            </div>
+            <div class="edu-side">
+              <span class="edu-date">2018/09 – 2022/06</span>
+              <span class="edu-chip edu-chip-cyan">GPA 3.49 / 5.00</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 工作经历 -->
+      <section class="section" id="work" aria-labelledby="work-title">
+        <h2 class="section-title" id="work-title"><span>WORK</span>工作经历</h2>
+        <div class="work-list">
+          <article class="work-entry reveal">
+            <div class="work-top">
+              <div class="work-head">
+                <h3 class="work-company">中铁快运股份有限公司上海分公司</h3>
+                <span class="work-role">主任业务员</span>
+              </div>
+              <span class="work-date">2023/12 – 2026/01</span>
+            </div>
+            <ul class="work-points">
+              <li>维护营业部的网络信息安全</li>
+              <li>负责营业部宣传的短视频拍摄及剪辑</li>
+              <li>负责营业部账号在公众平台的运营</li>
+            </ul>
+          </article>
+
+          <article class="work-entry reveal">
+            <div class="work-top">
+              <div class="work-head">
+                <h3 class="work-company">施耐德（苏州）变压器有限公司</h3>
+                <span class="work-role">Customer Project Designer</span>
+              </div>
+              <span class="work-date">2022/07 – 2023/01</span>
+            </div>
+            <ul class="work-points">
+              <li>利用 AutoCAD 和 Autodesk Inventor 为客户完成标准和非标准的变压器图纸设计</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- 项目经验 -->
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <h2 class="section-title" id="projects-title"><span>PROJECTS</span>项目经验</h2>
+        <!-- 项目条目加在这里：
+        <article class="project-entry reveal">
+          <h3 class="project-name">项目名称</h3>
+          <p class="project-desc">项目描述</p>
+        </article>
+        -->
+        <div class="project-list"></div>
+      </section>
+
+      <!-- 活动参与 -->
+      <section class="section" id="activities" aria-labelledby="activities-title">
+        <h2 class="section-title" id="activities-title"><span>ACTIVITIES</span>活动参与</h2>
+        <div class="activity-board">
+          <div class="activity-row reveal">
+            <span class="activity-mark" aria-hidden="true">✦</span>
+            <div class="activity-body">
+              <h3 class="activity-name">悉尼大学研究生学会电台栏目《同学你好》负责人</h3>
+              <a class="activity-link" href="https://www.xiaoyuzhoufm.com/podcast/6a3930c3c03b0a803bcc066a" target="_blank" rel="noopener">
+                去小宇宙听听
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+            <span class="activity-date">2026 – 2027</span>
+          </div>
+
+          <a class="activity-row activity-row-link reveal" href="activities/melbourne-music-2026.html">
+            <span class="activity-mark" aria-hidden="true">✦</span>
+            <div class="activity-body">
+              <h3 class="activity-name">墨尔本国际音乐比赛 · 志愿者</h3>
+              <p class="activity-meta">悉尼歌剧院</p>
+            </div>
+            <span class="activity-date">2026/08/05 – 08</span>
+          </a>
+
+          <a class="activity-row activity-row-link reveal" href="activities/supra-welcome-2026.html">
+            <span class="activity-mark" aria-hidden="true">✦</span>
+            <div class="activity-body">
+              <h3 class="activity-name">悉尼大学研究生会（SUPRA）迎新博览会 · 活动大使</h3>
+              <p class="activity-meta">悉尼大学</p>
+            </div>
+            <span class="activity-date">2026/08/18</span>
+          </a>
+
+          <div class="activity-row reveal">
+            <span class="activity-mark" aria-hidden="true">✦</span>
+            <div class="activity-body">
+              <h3 class="activity-name">扬州大学广陵学院校管乐团中声部部长</h3>
+            </div>
+            <span class="activity-date">2019 – 2020</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 兴趣 / 技能 -->
+      <section class="section" id="interests" aria-labelledby="interests-title">
+        <h2 class="section-title" id="interests-title"><span>INTERESTS</span>兴趣与技能</h2>
+
+        <div class="interest-grid">
+          <article class="interest-card reveal">
+            <span class="interest-icon i-yellow">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18.5a3.5 3.5 0 1 1-2-3.16V5l12-2.5v11.5a3.5 3.5 0 1 1-2-3.16V6.3L9 8.3v10.2Z"/></svg>
+            </span>
+            <h3>音乐</h3>
+            <p>耳机一戴，就是自己的世界。</p>
+            <span class="interest-corner" aria-hidden="true">♪</span>
+          </article>
+
+          <article class="interest-card reveal">
+            <span class="interest-icon i-cyan">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Zm2.4-.5 5.1 4h3l5.1-4H5.4ZM19 8.6l-4.2 3.3 4.2 5.1V8.6ZM5 8.6v8.4l4.2-5.1L5 8.6Zm2 9.4h10l-3.4-4.1h-3.2L6 18Z"/></svg>
+            </span>
+            <h3>看剧</h3>
+            <p>一集接一集，常常停不下来。</p>
+            <span class="interest-corner" aria-hidden="true">▶</span>
+          </article>
+
+          <article class="interest-card reveal">
+            <span class="interest-icon i-pink">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a1 1 0 0 1 1 1v3H3v-3a1 1 0 0 1 1-1Zm4-3h2v9H8V9Zm4-3h2v15h-2V6Zm4 4h2v7h-2v-7Zm4 3h1a1 1 0 0 1 1 1v3h-2v-4Z"/></svg>
+            </span>
+            <h3>音频编辑</h3>
+            <p>剪辑、混音，让声音更干净。</p>
+            <span class="interest-corner" aria-hidden="true">◉</span>
+          </article>
+        </div>
+
+        <div class="tag-cloud reveal" aria-label="技能标签">
+          <span class="tag">音乐</span>
+          <span class="tag">看剧</span>
+          <span class="tag">音频编辑</span>
+          <span class="tag">电气工程</span>
+          <span class="tag">智能信息工程</span>
+          <span class="tag tag-alt">USYD</span>
+        </div>
+      </section>
+
+      <!-- 荣誉奖励 -->
+      <section class="section" id="honors" aria-labelledby="honors-title">
+        <h2 class="section-title" id="honors-title"><span>HONORS</span>荣誉奖励</h2>
+
+        <div class="honor-grid">
+          <article class="honor-card reveal">
+            <h3 class="honor-year">2018–2019 <span>学年</span></h3>
+            <ul class="honor-list">
+              <li>校长一等奖学金</li>
+              <li>院三好学生</li>
+              <li>校运动会“先进个人”</li>
+              <li>大学生英语竞赛院二等奖</li>
+            </ul>
+          </article>
+
+          <article class="honor-card reveal">
+            <h3 class="honor-year">2019–2020 <span>学年</span></h3>
+            <ul class="honor-list">
+              <li>校长一等奖学金</li>
+              <li>院优秀共青团员</li>
+              <li>院三好学生</li>
+              <li>大学生英语竞赛院二等奖</li>
+              <li>江苏省第六届大学生艺术展演活动合奏展演甲组三等奖</li>
+            </ul>
+          </article>
+
+          <article class="honor-card reveal">
+            <h3 class="honor-year">2020–2021 <span>学年</span></h3>
+            <ul class="honor-list">
+              <li>五亭桥缸套奖学金</li>
+              <li>全国大学生英语竞赛国家二等奖</li>
+              <li>校优秀共青团员</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- 联系 -->
+      <section class="section section-contact" id="contact" aria-labelledby="contact-title">
+        <h2 class="section-title section-title-center" id="contact-title"><span>CONTACT</span>找我聊聊</h2>
+        <p class="contact-lede">想聊音乐、聊剧，或者聊聊电台，都欢迎。</p>
+
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <span class="contact-label">EMAIL</span>
+            <a class="contact-value" href="mailto:thatxiayue@gmail.com">thatxiayue@gmail.com</a>
+            <button class="copy-btn" id="copyEmail" data-email="thatxiayue@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2h9a3 3 0 0 1 3 3v9h-2V5a1 1 0 0 0-1-1H8V2ZM5 6h9a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Zm0 2v12h9V8H5Z"/></svg>
+              复制邮箱
+            </button>
+          </div>
+
+          <div class="contact-card reveal">
+            <span class="contact-label">GITHUB</span>
+            <a class="contact-value" href="https://github.com/yuexia-ee" target="_blank" rel="noopener">github.com/yuexia-ee</a>
+            <a class="copy-btn as-link" href="https://github.com/yuexia-ee" target="_blank" rel="noopener">
+              打开主页
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-bottom reveal">
+          <p class="hand-note">随时写信给我 <span aria-hidden="true">↘</span></p>
+          <a class="big-mail" href="mailto:thatxiayue@gmail.com">thatxiayue@gmail.com</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year">2026</span> 夏越 · 手写 HTML / CSS / JS</p>
+        <a href="#top" class="back-top">回到顶部 <span aria-hidden="true">↑</span></a>
+      </footer>
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">邮箱已复制</div>
+
+<script src="script.js"></script>
+</body>
+</html>
