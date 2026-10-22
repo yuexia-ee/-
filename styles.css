@@ -535,8 +535,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
   transition: transform .22s var(--ease), box-shadow .22s var(--ease);
 }
 .project-entry:hover { transform: translate(-3px,-4px); box-shadow: 13px 14px 0 var(--ink); }
-.project-entry:nth-child(1) { --accent: var(--green); }
-.project-entry:nth-child(2) { --accent: var(--cyan); }
+.project-entry:nth-child(1) { --accent: var(--cyan); }
+.project-entry:nth-child(2) { --accent: var(--green); }
 .project-entry::before {
   content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 9px;
   background: var(--accent); border-right: 3px solid var(--ink);
