@@ -364,13 +364,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .activity-name { font-size: clamp(17px, 2.2vw, 21px); font-weight: 900; line-height: 1.45; letter-spacing: -.005em; }
 .activity-role, .activity-unit { white-space: nowrap; }
 .activity-meta { margin-top: 7px; font-size: 13.5px; color: #4a4a4a; }
-.activity-link {
-  display: inline-flex; align-items: center; gap: 5px; margin-top: 9px;
-  font-family: var(--mono); font-size: 12.5px; font-weight: 700;
-  border-bottom: 2px solid currentColor; padding-bottom: 1px;
-}
-.activity-link:hover { background: var(--yellow); }
-.activity-link svg { width: 13px; height: 13px; }
 .activity-date { padding-top: 7px; font-family: var(--mono); font-size: 12.5px; font-weight: 700; white-space: nowrap; }
 .activity-row-link {
   color: inherit; cursor: pointer;
