@@ -86,13 +86,11 @@
   box-shadow: 5px 5px 0 var(--ink);
   background: var(--cream);
 }
-.ap-listen-icon {
-  flex: 0 0 auto; width: 46px; height: 46px;
-  display: grid; place-items: center;
-  background: var(--ap-accent); border: 3px solid var(--ink);
-  box-shadow: 3px 3px 0 var(--ink);
+.ap-listen-cover {
+  flex: 0 0 auto; width: 80px; height: 80px;
+  object-fit: cover; background: var(--yellow);
+  border: 3px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);
 }
-.ap-listen-icon svg { width: 20px; height: 20px; fill: var(--ink); }
 .ap-listen-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .ap-listen-tag {
   font-family: var(--mono); font-size: 9.5px; font-weight: 700;
@@ -267,8 +265,7 @@
   .ap-lede { margin-top: 18px; font-size: 15.5px; line-height: 1.85; }
   .ap-copy { margin-top: 14px; font-size: 14.5px; line-height: 1.85; }
   .ap-listen { gap: 12px; margin-top: 16px; padding: 14px; border-width: 3px; box-shadow: 6px 6px 0 var(--ink); }
-  .ap-listen-icon { width: 40px; height: 40px; }
-  .ap-listen-icon svg { width: 17px; height: 17px; }
+  .ap-listen-cover { width: 64px; height: 64px; }
   .ap-listen-title { font-size: 17px; }
   .ap-meta { grid-template-columns: 1fr; gap: 10px; margin-top: 22px; }
   .ap-meta-item { display: flex; align-items: baseline; gap: 12px; padding: 9px 12px 10px; border-top-width: 5px; }
