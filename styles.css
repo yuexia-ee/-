@@ -410,7 +410,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .about-stage { position: relative; }
 .about-card { transform: rotate(-.4deg); padding: 42px 40px 42px; position: relative; z-index: 2; }
 .about-cat {
-  position: absolute; right: -8px; bottom: calc(100% - 26px); width: 170px; height: auto;
+  position: absolute; right: -8px; bottom: calc(100% - 34px); width: 189px; height: auto;
   z-index: 4; pointer-events: none; transform: rotate(-.4deg); transform-origin: bottom right;
   filter: drop-shadow(0 10px 10px rgba(60,45,30,.18));
 }
@@ -780,7 +780,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .card { padding: 24px 20px; box-shadow: 6px 6px 0 var(--ink); }
   .text { font-size: 15.5px; }
   .card.about-card { padding: 34px 20px 24px; }
-  .about-cat { width: 85px; right: -4px; bottom: calc(100% - 13px); }
+  .about-cat { width: 95px; right: -4px; bottom: calc(100% - 17px); }
 
   .activity-row { grid-template-columns: auto 1fr; gap: 12px; padding: 20px 16px; }
   .activity-mark { width: 32px; height: 32px; flex-basis: 32px; font-size: 13px; }
@@ -864,7 +864,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .section-title { font-size: 24px; }
   .hero-name { font-size: 36px; }
   .card.about-card { padding: 32px 18px 22px; }
-  .about-cat { width: 80px; right: -3px; bottom: calc(100% - 12px); }
+  .about-cat { width: 89px; right: -3px; bottom: calc(100% - 16px); }
 }
 
 /* 减少动效 */
