@@ -127,7 +127,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .loader-signal i {
   width: 7px; height: 7px; display: inline-block;
   background: var(--green); border: 2px solid var(--ink);
-  animation: blink 1s steps(1) infinite;
 }
 .loader-line {
   padding: 14px 18px 18px;
