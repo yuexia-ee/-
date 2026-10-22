@@ -7,6 +7,7 @@
 .ap-theme-melbourne { --ap-accent: #8ad9bb; }
 .ap-theme-supra { --ap-accent: #66d9ef; }
 .ap-theme-courses { --ap-accent: var(--yellow); }
+.ap-theme-usyd { --ap-accent: var(--cyan); }
 
 /* 导航里的返回主页按钮 */
 .ap-home {
@@ -130,6 +131,26 @@
 .course-item:nth-child(4n)::before { background: var(--green); }
 .course-item:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); background: var(--cream); }
 
+/* 硕士课程 */
+.course-list { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 11px; }
+.course-row {
+  display: grid; grid-template-columns: 104px 1fr; align-items: center; gap: 16px;
+  background: var(--paper); border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
+  padding: 12px 16px;
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s;
+}
+.course-row:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); background: var(--cream); }
+.course-code {
+  justify-self: start; display: inline-flex; align-items: center; justify-content: center;
+  min-width: 86px; padding: 4px 7px;
+  font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .04em;
+  background: var(--cyan); border: 2px solid var(--ink); box-shadow: 2px 2px 0 var(--ink);
+}
+.course-row:nth-child(4n+2) .course-code { background: var(--yellow); }
+.course-row:nth-child(4n+3) .course-code { background: var(--pink); }
+.course-row:nth-child(4n) .course-code { background: var(--green); }
+.course-title { font-size: 15.5px; font-weight: 700; line-height: 1.45; }
+
 /* 证明 */
 .ap-proof {
   margin: 20px 0 0; background: var(--paper);
@@ -214,6 +235,10 @@
   .course-grid { grid-template-columns: 1fr; gap: 9px; margin-top: 16px; }
   .course-item { min-height: 52px; padding: 10px 12px 10px 42px; border-width: 2.5px; box-shadow: 3px 3px 0 var(--ink); font-size: 14px; }
   .course-item::before { left: 10px; width: 22px; height: 22px; font-size: 8.5px; }
+  .course-list { gap: 9px; margin-top: 16px; }
+  .course-row { grid-template-columns: 1fr; gap: 7px; padding: 11px 13px; border-width: 2.5px; box-shadow: 3px 3px 0 var(--ink); }
+  .course-code { min-width: 0; font-size: 10px; padding: 2px 6px; }
+  .course-title { font-size: 14.5px; }
   .ap-proof { box-shadow: 6px 6px 0 var(--ink); border-width: 3px; }
   .ap-proof:hover { transform: none; box-shadow: 6px 6px 0 var(--ink); }
   .ap-proof figcaption { flex-direction: column; align-items: flex-start; gap: 3px; font-size: 10px; padding: 9px 11px; }
