@@ -6,6 +6,7 @@
 .ap-frame { max-width: 1060px; }
 .ap-theme-melbourne { --ap-accent: #8ad9bb; }
 .ap-theme-supra { --ap-accent: #66d9ef; }
+.ap-theme-radio { --ap-accent: #ffb3c7; }
 .ap-theme-courses { --ap-accent: var(--yellow); }
 .ap-theme-usyd { --ap-accent: var(--cyan); }
 
@@ -65,7 +66,47 @@
   font-size: 16.5px; line-height: 1.9; color: #262626;
   text-wrap: pretty;
 }
+.ap-copy {
+  margin-top: 18px; max-width: 64ch;
+  font-size: 16px; line-height: 1.9; color: #262626;
+  text-wrap: pretty;
+}
 .ap-nowrap { white-space: nowrap; }
+
+/* 电台收听卡片 */
+.ap-listen {
+  display: flex; align-items: center; gap: 16px;
+  margin-top: 20px; padding: 18px 20px;
+  background: var(--paper); border: 4px solid var(--ink);
+  box-shadow: 8px 8px 0 var(--ink);
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s;
+}
+.ap-listen:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 5px 5px 0 var(--ink);
+  background: var(--cream);
+}
+.ap-listen-icon {
+  flex: 0 0 auto; width: 46px; height: 46px;
+  display: grid; place-items: center;
+  background: var(--ap-accent); border: 3px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.ap-listen-icon svg { width: 20px; height: 20px; fill: var(--ink); }
+.ap-listen-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.ap-listen-tag {
+  font-family: var(--mono); font-size: 9.5px; font-weight: 700;
+  letter-spacing: .13em; color: #555;
+}
+.ap-listen-title {
+  display: flex; align-items: baseline; gap: 6px;
+  font-size: 19px; font-weight: 900; line-height: 1.35;
+}
+.ap-listen-title span { font-size: 16px; }
+.ap-listen-url {
+  font-family: var(--mono); font-size: 10.5px;
+  letter-spacing: .04em; color: #5a5a5a;
+}
 
 /* 信息卡 */
 .ap-meta {
@@ -224,6 +265,11 @@
   .ap-title { font-size: clamp(30px, 9vw, 40px); margin-top: 18px; }
   .ap-role { font-size: 11.5px; gap: 6px; }
   .ap-lede { margin-top: 18px; font-size: 15.5px; line-height: 1.85; }
+  .ap-copy { margin-top: 14px; font-size: 14.5px; line-height: 1.85; }
+  .ap-listen { gap: 12px; margin-top: 16px; padding: 14px; border-width: 3px; box-shadow: 6px 6px 0 var(--ink); }
+  .ap-listen-icon { width: 40px; height: 40px; }
+  .ap-listen-icon svg { width: 17px; height: 17px; }
+  .ap-listen-title { font-size: 17px; }
   .ap-meta { grid-template-columns: 1fr; gap: 10px; margin-top: 22px; }
   .ap-meta-item { display: flex; align-items: baseline; gap: 12px; padding: 9px 12px 10px; border-top-width: 5px; }
   .ap-meta-item dt { flex: 0 0 82px; }
