@@ -23,5 +23,15 @@
         });
       });
     });
+  } else {
+    // A cover entry always starts a fresh visit at the top, not at an old hash.
+    history.scrollRestoration = 'manual';
+    var freshState = Object.assign({}, history.state);
+    delete freshState.resumeDetailReturn;
+    try { history.replaceState(freshState, '', window.location.href.split('#')[0]); } catch (error) {}
+    window.scrollTo({top: 0, left: 0, behavior: 'instant'});
+    window.addEventListener('pageshow', function (event) {
+      if (!event.persisted) window.scrollTo({top: 0, left: 0, behavior: 'instant'});
+    }, {once: true});
   }
 })();

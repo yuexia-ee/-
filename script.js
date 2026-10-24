@@ -45,6 +45,8 @@
 
   function enterSite() {
     if (!loaderReady || loaderEntered) return;
+    window.scrollTo({top: 0, left: 0, behavior: 'instant'});
+    history.scrollRestoration = 'auto';
     loaderEntered = true;
     finishLoader();
   }
