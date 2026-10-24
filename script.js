@@ -175,6 +175,15 @@
     });
   }
 
+  var wechatBtn = document.getElementById('copyWechat');
+  if (wechatBtn) {
+    wechatBtn.addEventListener('click', function () {
+      var value = wechatBtn.getAttribute('data-wechat');
+      copyText(value)
+        .then(function () { showToast('微信号已复制：' + value); })
+        .catch(function () { showToast('复制失败，请手动选中微信号'); });
+    });
+  }
   /* ---------- 图片/链接外链安全 ---------- */
   [].slice.call(document.querySelectorAll('a[target="_blank"]')).forEach(function (a) {
     if (!a.rel) a.rel = 'noopener';
