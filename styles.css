@@ -606,7 +606,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
   background: var(--accent); border-right: 3px solid var(--ink);
 }
 .work-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-.work-head { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.work-head {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start; gap: 10px 24px; width: 100%;
+}
+.work-head > .work-date { grid-column: 2; grid-row: 1; justify-self: end; }
+.work-head > .work-role { grid-column: 1; grid-row: 2; justify-self: start; }
 .work-company { font-size: clamp(19px, 2.35vw, 25px); font-weight: 900; line-height: 1.32; letter-spacing: -.01em; }
 .work-role {
   display: inline-block; font-size: 12.5px; font-weight: 700;
@@ -845,6 +850,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .work-entry { padding: 19px 16px 19px 23px; box-shadow: 6px 6px 0 var(--ink); }
   .work-entry::before { width: 7px; }
   .work-top { gap: 10px; }
+  .work-head { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
   .work-company { font-size: 19px; }
   .work-role { font-size: 11.5px; padding: 1px 8px; }
   .work-date { font-size: 11.5px; padding: 2px 8px; }
@@ -907,3 +913,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Returning to a section skips the cover and initial smooth scrolling. */
+html.skip-cover .loader { display: none; }
+html.restoring-section { scroll-behavior: auto; }

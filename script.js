@@ -7,6 +7,12 @@
   var loader = document.getElementById('loader');
   var loaderReady = false;
   var loaderEntered = false;
+  if (document.documentElement.classList.contains('skip-cover')) {
+    loaderEntered = true;
+    document.body.classList.add('is-ready');
+    if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+    loader = null;
+  }
 
   function finishLoader() {
     if (!loader) return;
