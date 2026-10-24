@@ -8,7 +8,7 @@
     var link = event.target.closest('a[href]');
     if (!link || (link.target && link.target !== '_self')) return;
     var href = link.getAttribute('href');
-    if (!/^(education|activities)\//.test(href)) return;
+    if (!/^(education|activities|hobbies)\//.test(href)) return;
     var section = link.closest('section[id]');
     var state = Object.assign({}, history.state, {resumeDetailReturn: true});
     try { history.replaceState(state, '', section ? '#' + section.id : window.location.href); } catch (error) {}
