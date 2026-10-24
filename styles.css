@@ -917,3 +917,25 @@ button { font: inherit; color: inherit; cursor: pointer; }
 /* Returning to a section skips the cover and initial smooth scrolling. */
 html.skip-cover .loader { display: none; }
 html.restoring-section { scroll-behavior: auto; }
+
+/* ---------------- 兴趣爱好 ---------------- */
+.hobby-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.hobby-card {
+  display: flex; align-items: center; gap: 20px; padding: 28px 30px;
+  background: var(--paper); border: 4px solid var(--ink); box-shadow: 9px 9px 0 var(--ink);
+}
+.hobby-mark {
+  display: grid; place-items: center; width: 56px; height: 56px; flex: 0 0 56px;
+  background: var(--cyan); border: 3px solid var(--ink); box-shadow: 3px 3px 0 var(--ink);
+  font-size: 28px; font-weight: 900;
+}
+.hobby-card:nth-child(2) .hobby-mark { background: var(--pink); }
+.hobby-card h3 { font-size: 24px; font-weight: 900; }
+@media (max-width: 860px) {
+  .nav-links .nav-cta { grid-column: 1 / -1; }
+}
+@media (max-width: 720px) {
+  .hobby-grid { grid-template-columns: 1fr; gap: 16px; }
+  .hobby-card { padding: 20px; gap: 16px; box-shadow: 6px 6px 0 var(--ink); }
+  .hobby-card h3 { font-size: 21px; }
+}
