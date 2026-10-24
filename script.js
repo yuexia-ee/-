@@ -1,6 +1,18 @@
 (function () {
   'use strict';
 
+
+  // Preserve the originating section for the browser Back button.
+  document.addEventListener('click', function (event) {
+    if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    var link = event.target.closest('a[href]');
+    if (!link || (link.target && link.target !== '_self')) return;
+    var href = link.getAttribute('href');
+    if (!/^(education|activities)\//.test(href)) return;
+    var section = link.closest('section[id]');
+    var state = Object.assign({}, history.state, {resumeDetailReturn: true});
+    try { history.replaceState(state, '', section ? '#' + section.id : window.location.href); } catch (error) {}
+  });
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- 载入动画 ---------- */
